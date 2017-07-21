@@ -104,7 +104,11 @@ body {
   margin-right: 100px;
 }
 
-.main__link-git:hover {
+.main__link-cert {
+  color: inherit;
+}
+
+.main__link-git:hover, .main__link-cert:hover {
   text-decoration: none;
   color: #000;
 }
@@ -163,6 +167,8 @@ body {
 }
 
 .footer {
+  font-size: 12px;
+  line-height: 14px;
   margin-top: 80px;
   color: #000;
   border-top: 4px solid #242424;
@@ -170,6 +176,7 @@ body {
 }
 .footer__contacts {
   color: #fff;
+  margin-bottom: 20px;
 }
 
 .footer__copyright {
@@ -218,6 +225,10 @@ body {
   left: 0;
 }
 
+.footer__text {
+  font-size: 12px;
+}
+
 .footer__img {
   display: inline-block;
   vertical-align: top;
@@ -228,11 +239,45 @@ body {
   display: inline-block;
   vertical-align: top;
   width: 290px;
-  font-size: 12px;
-  line-height: 14px;
   color: #646464;
   margin: 0;
   padding: 0;
   padding-top: 3px;
   padding-left: 50px;
-  }
+}
+
+.main__img-zoom {
+  position: relative;
+}
+
+.main__img-zoom:hover::after{
+  content:"";
+  background-color: #000;
+  width: 222px;
+  height: 202px;
+  top:-188px;
+  bottom:0;
+  left:0;
+  right:0;
+  position: absolute;
+  z-index:1;
+  opacity:0.3;
+}
+
+.main__img-zoom:hover::before{
+  content: "";
+  background-color: #fff;
+  background-image: url("../img/glass.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 56px;
+  height: 55px;
+  top: -114px;
+  bottom: 0;
+  left: 83px;
+  right: 0;
+  position: absolute;
+  z-index: 2;
+  opacity: 0.8;
+  border-radius: 27px;
+}
